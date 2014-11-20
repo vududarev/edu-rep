@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="comments">
+  <div id="comments-items"></div>
+  <form>
+    <input id="comment-msg" type="text"/>
+    <input type="button" id="new-comment">
+    <script>
+      var arr = [];
+      jQuery("#new-comment").on("click", function(){
+        com = jQuery("#comment-msg").val();
+        jQuery("#comments-items").html(com);
+        $("#comments-items").before("<div>" + com + "</div>")
+        arr.push(com);
+        console.log(arr);
+      })
+    </script>
+  </form>
+</div>
+</body>
+</html>
