@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head lang="ru">
-    <link rel="stylesheet" href="css/bootstrap.css">
+  <head lang="ru">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <title></title>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Home</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  </head>
+  <body>
+    <div class="container">
 
-    <div class="list-group left-panel">
-        <a href="#" class="list-group-item active">
-            Cras justo odio
-        </a>
-        <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-        <a href="#" class="list-group-item">Morbi leo risus</a>
-        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-        <a href="#" class="list-group-item">Vestibulum at eros</a>
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">News</a></li>
+              <li><a href="#">Disney</a></li>
+              <li><a href="#">Cartoons</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="row">
+        <aside class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+
+          <ul class="nav nav-sidebar">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+
+          <form class="form-signin" role="form">
+            <h4 class="form-signin-heading">Admin Login</h4>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+          </form>
+        </aside>
+
+        <article class="col-sm-9 col-md-10 master">
+          <div class="main">
+            <h4>Animated musical adventure-comedy film </h4>
+            <p>Loren ipsum etc.</p>
+          </div>
+          <div class="comments">
+            <div class="comment-lv0">
+
+            </div>
+            <div class="comment-lv0">
+
+            </div>
+            <div class="comment-lv1">
+
+            </div>
+            <div class="comment-lv1">
+
+            </div>
+            <div class="add-comment">
+              <form class="form-comment" role="form">
+                <h4 class="form-signin-heading">New Comemnt</h4>
+                <input type="text" id="inputName" class="form-control" placeholder="Your Name" required>
+                <input type="text" id="inputEmail" class="form-control" placeholder="email address" required>
+                <textarea id="add-comm-message" class="form-control" placeholder="Comments" required></textarea>
+                <button class="btn btn-primary btn-block" type="submit">Comment</button>
+              </form>
+            </div>
+          </div>
+
+        </article>
+      </div>
+
     </div>
-</body>
+  </body>
 </html>
