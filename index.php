@@ -133,7 +133,7 @@
                 ?>
             </div>
             <div class="add_comment">
-                <form action="index.php" method="post" class="form_comment" role="form">
+                <form action="add_coment.php" method="post" class="form_comment" role="form">
                     <h4 class="form_signin_heading">New Comment</h4>
                     <input type="text" name="user_name" id="inputName" class="form_control" placeholder="Your Name" required>
                     <input type="text" name="user_email" id="inputEmail" class="form_control" placeholder="email address" required>
@@ -147,17 +147,3 @@
 </div>
 </body>
 </html>
-<?php
-$user_name = $_POST['user_name'];
-$user_email = $_POST['user_email'];
-$user_comment = $_POST['user_comment'];
-$today = date('j/m/y');
-$fw = fopen("comments.json", 'a');
-$added_comment = array(
-    "date"=>$today,
-    "name"=>$user_name,
-    "email"=>$user_email,
-    "comment"=>$user_comment,);
-fwrite($fw,json_encode($added_comment)+'\n\\=\\');
-fclose($fw);
-?>
